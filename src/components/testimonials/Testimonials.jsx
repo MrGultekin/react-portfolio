@@ -3,6 +3,14 @@ import AVT1 from '../../assets/avatar1.jpg'
 import AVT2 from '../../assets/avatar2.jpg'
 import AVT3 from '../../assets/avatar3.jpg'
 import AVT4 from '../../assets/avatar4.jpg'
+// import Swiper core and required modules
+import {Navigation, Pagination, Scrollbar} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const data = [
     {
@@ -45,21 +53,31 @@ const Testimonials = () => {
         <section id="testimonials">
             <h5>Review From Clients</h5>
             <h2>Testimonials</h2>
-            <div className="container testimonials__container">
+            <Swiper className="container testimonials__container"
+                // install Swiper modules
+                    modules={[Navigation, Pagination, Scrollbar]}
+                    spaceBetween={40}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    // scrollbar={{ draggable: true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+            >
                 {
-                    data.map(({avatar, name, review}, index) =>{
+                    data.map(({avatar, name, review}, index) => {
                         return (
-                    <article key={index} className="testimonial">
-                    <div className="client__avatar">
-                    <img src={avatar} alt="women 1"/>
-                    </div>
-                    <h5 className={'client__name'}>{name}</h5>
-                    <small className="client__review"> {review}</small>
-                    </article>
+                            <SwiperSlide key={index} className="testimonial">
+                                <div className="client__avatar">
+                                    <img src={avatar} alt="women 1"/>
+                                </div>
+                                <h5 className={'client__name'}>{name}</h5>
+                                <small className="client__review"> {review}</small>
+                            </SwiperSlide>
                         )
                     })
                 }
-            </div>
+            </Swiper>
         </section>
     )
 }
