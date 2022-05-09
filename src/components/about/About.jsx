@@ -15,6 +15,7 @@ const About = () => {
                         <img src={ME} alt=""/>
                     </div>
                 </div>
+
                 <div className="about__content">
                     <div className="about__cards">
                         <article className="about__card">
@@ -22,6 +23,7 @@ const About = () => {
                             <h5>Experience</h5>
                             <small>2+ Years Working</small>
                         </article>
+
                         <article className="about__card">
                             <FiUsers className={'about__icon'}/>
                             <h5>Clients</h5>
@@ -32,6 +34,7 @@ const About = () => {
                             <h5>Projects</h5>
                             <small>40+ Completed</small>
                         </article>
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ex labore laudantium odit,
                             reprehenderit sit.
@@ -42,10 +45,7 @@ const About = () => {
                         <a href="#contact" className='btn btn-primary'>Let´s Talk</a>
                     </div>
                 </div>
-
-            </div>
         </section>
     )
-
 }
 export default About;
