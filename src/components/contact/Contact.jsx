@@ -15,13 +15,13 @@ const Contact = () => {
                         <HiOutlineMail/>
                         <h4>Email</h4>
                         <h5>gultekin.de@gmail.com</h5>
-                        <a href="mailto:gultekin.de@gmail.com">Send a message</a>
+                        <a href="mailto:gultekin.de@gmail.com" target={'_blank'}>Send a mail</a>
                     </article>
                     <article className="contact__option">
                         <RiMessengerLine/>
                         <h4>Messenger</h4>
                         <h5>Facebook Message</h5>
-                        <a href="https://m.me/is.mr.rose">Send a message</a>
+                        <a href="https://m.me/is.mr.rose" target={'_blank'}>Send a message</a>
                     </article>
 
                     <article className="contact__option">
