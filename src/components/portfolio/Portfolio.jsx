@@ -12,7 +12,7 @@ const data = [
         image: IMG1,
         title: 'Charts Templates',
         // demo: 'https://dribbble.com/shots/16673715-Crypto-currency-dashboards-and-financial-data-visualization',
-        github: 'https://github.com',
+        github: 'https://github.com/MrGultekin/day2dayreact',
         demo: 'https://as-like.web.app/'
     },
     {
