@@ -1,5 +1,4 @@
 import './contact.css'
-
 import {HiOutlineMail} from "react-icons/hi";
 import {RiMessengerLine} from "react-icons/ri";
 import {BsWhatsapp} from "react-icons/bs";
@@ -20,6 +19,8 @@ const Contact = () => {
             }, (error) => {
                 console.log(error.text);
             });
+        e.target.reset();
+
     };
     return (
         <section id="contact">
