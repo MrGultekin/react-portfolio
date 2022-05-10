@@ -1,6 +1,5 @@
-import Header from "./Header";
 import {BsFacebook, BsLinkedin} from 'react-icons/bs'
-import {FaGithub, } from "react-icons/fa";
+import {FaGithub,} from "react-icons/fa";
 
 const HeaderSocials = () => {
     return (

@@ -1,9 +1,26 @@
 import './contact.css'
+
 import {HiOutlineMail} from "react-icons/hi";
 import {RiMessengerLine} from "react-icons/ri";
 import {BsWhatsapp} from "react-icons/bs";
+import {useRef} from "react";
+// import emailjs from '@emailjs/browser';
+import emailjs from 'emailjs-com';
+
+
 
 const Contact = () => {
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_ou0z1jl', 'template_1tx1d1m', form.current, 'qJqD7PR7Rn-xGV8MZ')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         <section id="contact">
             <h5>Get In Touch</h5>
@@ -32,7 +49,7 @@ const Contact = () => {
                     </article>
                 </div>
                 {/*==============================End Of Contact Option===============================*/}
-                <form action="">
+                <form ref={form} onSubmit={sendEmail}>
                     <input type="text" name={'name'} placeholder="Your Full Name" required/>
                     <input type="email" name={'email'} placeholder="Your Email" required/>
                     <textarea name="message" placeholder="Your Message" rows="7" required></textarea>
